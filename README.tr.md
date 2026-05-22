@@ -29,112 +29,14 @@ Freelancer'lar, küçük işletmeler, ajanslar, ofis ekipleri, danışmanlık ve
 2. İlk olarak Demo 1 ile başla.
 3. Sonra yedek senaryoları tek tek dene.
 
-## 5. Workshop Akışı
+## 5. Demo Akışı
 
-### Demo 1: Kontoauszug + fatura listesi oluşturma
+1. [Demo 1: Kontoauszug + fatura listesi oluşturma](demo-1.tr.md)
+2. [Demo 2: Sözleşme inceleme](demo-2.tr.md)
+3. [Demo 3: E-posta önceliklendirme](demo-3.tr.md)
+4. [Demo 4: Açık faturaları takip etme](demo-4.tr.md)
 
-Dosyalar:
-
-- [artifacts/demo-kontoauszug.csv](artifacts/demo-kontoauszug.csv)
-- [artifacts/demo_data](artifacts/demo_data)
-
-Amaç:
-
-- önce PDF faturalardan basit bir fatura listesi oluşturmak
-- Ödemeleri faturalarla eşleştirmek
-- açık faturaları bulmak
-- kısmi ödemeleri görmek
-- isim farklılıklarını ve açıklanamayan ödemeleri işaretlemek
-
-Claude ile adımlar:
-
-1. [artifacts/demo_data](artifacts/demo_data) altındaki örnek PDF faturaları aç.
-2. Claude Web kullanırken PDF dosyalarını chat ekranına tek tek yükle ya da her PDF için ayrı doğrudan GitHub dosya linki ver.
-3. Claude'a, bu PDF'lerden fatura numarası, müşteri, tarih, tutar, vade tarihi ve ödeme durumu sütunlarını içeren bir CSV dosyası oluşturmasını söyle.
-4. Sonra oluşturulan bu CSV'yi [artifacts/demo-kontoauszug.csv](artifacts/demo-kontoauszug.csv) ile birlikte ödeme eşleştirme adımında kullan.
-
-Örnek prompt:
-
-```text
-Sana şimdi birden fazla faturayı PDF olarak yükleyeceğim. Alternatif olarak her PDF için doğrudan GitHub dosya linki de paylaşabilirim. Bu faturaların hepsini okuyup fatura numarası, müşteri, tarih, tutar, vade tarihi ve ödeme durumu sütunlarını içeren bir CSV fatura listesi oluştur. Sonra bu banka ekstresindeki gelen ödemeleri bu CSV ile eşleştir. Üç tablo döndür: (1) eşleşen ödemeler, (2) ekstrede var ama faturada yok, (3) faturada var ama ödeme gelmemiş. Belirsiz eşleşmeleri işaretle.
-```
-
-Dikkat edilmesi gerekenler:
-
-- Claude Web tarafında klasör yolu vermek tek başına yeterli olmayabilir. En güvenilir yöntem PDF'leri yüklemek, ikinci seçenek ise her PDF için ayrı dosya linki vermektir.
-- Müller GmbH ve K. Müller bilerek birebir aynı yazılmadı.
-- Innovate GmbH sadece kısmen ödendi.
-- Fiverr ve Ref. 2024-123 doğrudan fatura listesiyle eşleşmiyor.
-- Adobe, Slack, Notion ve banka masrafları gider, fatura tahsilatı değil.
-
-Beklenen ana sonuçlar:
-
-- Açık veya tam ödenmemiş: 2025-053, 2025-055, 2025-056
-- Geç ödenmiş: 2025-050
-- Belirsiz veya eşleşmeyen hareketler: Ref. 2024-123, Fiverr Auszahlung
-
-Referans:
-
-- [artifacts/demo-answer-key.md](artifacts/demo-answer-key.md)
-
-### Demo 2: Sözleşme inceleme
-
-Dosya:
-
-- [artifacts/demo-vertrag.pdf](artifacts/demo-vertrag.pdf)
-
-Amaç:
-
-- riskli sözleşme maddelerini bulmak
-- sonuçlarını sade bir dille açıklamak
-
-Örnek prompt:
-
-```text
-Bu sözleşmeyi bir freelancer olarak oku. Dikkat etmem gereken maddeleri sade Türkçe olarak özetle. Özellikle: ödeme şartları, fesih koşulları, sorumluluk ve fikri mülkiyet. Riskli ya da alışılmadık maddeleri işaretle.
-```
-
-Beklenen noktalar:
-
-- 90 gün ödeme vadesi
-- 3 ay fesih süresi ve otomatik uzama
-- hak devrinin daha üretim anında başlaması
-- sınırsız sorumluluk
-- geniş rekabet yasağı
-
-### Demo 3: E-posta önceliklendirme
-
-Dosya:
-
-- [artifacts/demo-posteingang.txt](artifacts/demo-posteingang.txt)
-
-Amaç:
-
-- e-postaları önceliğe göre sıralamak
-- bugün, bu hafta ve sonra olarak ayırmak
-
-Örnek prompt:
-
-```text
-Bu e-postaları önceliğe göre sınıflandır: Bugün cevaplanmalı / Bu hafta / Eylem gerekmiyor. Her e-posta için önerilen yanıt tonunu ve tahmini süreyi de belirt.
-```
-
-### Demo 4: Açık faturaları takip etme
-
-Dosya:
-
-- [artifacts/demo-offene-rechnungen.xlsx](artifacts/demo-offene-rechnungen.xlsx)
-
-Amaç:
-
-- gecikme süresine göre doğru tonda e-posta yazmak
-- nazik, net ve resmi hatırlatmaları ayırmak
-
-Örnek prompt:
-
-```text
-Bu listede gecikmiş ödeme olan müşteriler var. Her biri için, gecikme süresine uygun tonda bir hatırlatma e-postası yaz: 1–14 gün için nazik ve hatırlatıcı, 15–30 gün için kararlı ve net, 30+ gün için resmi ve sonuç odaklı.
-```
+Her demo sayfasında ilgili dosya, örnek prompt ve bir sonraki adıma geçiş linki bulunur.
 
 ## 6. Kendi Kendine Deneme
 

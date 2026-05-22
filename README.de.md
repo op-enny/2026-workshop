@@ -29,113 +29,14 @@ Freelancer, kleine Unternehmen, Agenturen, Office-Teams, Beratungs- und Backoffi
 2. Mit Demo 1 starten.
 3. Danach die Backup-Szenarien einzeln ausprobieren.
 
-## 5. Workshop-Ablauf
+## 5. Demo-Ablauf
 
-### Demo 1: Kontoauszug + Rechnungsliste aufbauen
+1. [Demo 1: Kontoauszug + Rechnungsliste aufbauen](demo-1.de.md)
+2. [Demo 2: Vertrag prüfen](demo-2.de.md)
+3. [Demo 3: Posteingang priorisieren](demo-3.de.md)
+4. [Demo 4: Offene Rechnungen nachverfolgen](demo-4.de.md)
 
-Dateien:
-
-- [artifacts/demo-kontoauszug.csv](artifacts/demo-kontoauszug.csv)
-- [artifacts/demo_data](artifacts/demo_data)
-
-Ziel:
-
-- aus den Rechnungs-PDFs zuerst eine einfache Rechnungsliste erstellen
-- Zahlungen mit Rechnungen abgleichen
-- offene Rechnungen finden
-- Teilzahlungen erkennen
-- Namensabweichungen und Fremdzahlungen markieren
-
-Schritte mit Claude:
-
-1. Öffne die Beispiel-Rechnungen aus [artifacts/demo_data](artifacts/demo_data).
-2. Nutze in Claude Web entweder den Upload und lade die PDF-Dateien einzeln in den Chat hoch, oder sende einzelne direkte GitHub-Dateilinks zu den PDFs.
-3. Sage Claude, dass aus diesen PDF-Rechnungen eine CSV-Datei mit den Spalten Rechnungsnummer, Kunde, Datum, Betrag, Fälligkeitsdatum und Zahlungsstatus erstellt werden soll.
-4. Nutze diese erzeugte CSV danach zusammen mit [artifacts/demo-kontoauszug.csv](artifacts/demo-kontoauszug.csv) für den Zahlungsabgleich.
-
-Beispielprompt:
-
-```text
-Ich lade dir jetzt mehrere Rechnungen als PDF hoch. Alternativ sende ich dir direkte GitHub-Dateilinks zu diesen PDFs. Lies alle Rechnungen und erstelle daraus eine CSV-Datei mit den Spalten Rechnungsnummer, Kunde, Datum, Betrag, Fälligkeitsdatum und Zahlungsstatus. Nutze diese CSV anschließend zusammen mit dem Kontoauszug für den Abgleich. Erstelle drei Tabellen: (1) übereinstimmende Zahlungen, (2) Zahlungen ohne passende Rechnung, (3) Rechnungen ohne Zahlungseingang. Markiere unklare Übereinstimmungen.
-```
-
-Worauf man achten sollte:
-
-- Die Rechnungsliste ist nicht vorgegeben, sondern wird aus den PDF-Belegen aufgebaut.
-- In Claude Web ist Datei-Upload meist verlässlicher als nur ein Ordnerpfad. Wenn Links genutzt werden, dann einzelne PDF-Dateilinks statt nur ein Repo-Ordner.
-- Müller GmbH und K. Müller sind absichtlich kein exakter Match.
-- Innovate GmbH ist nur teilweise bezahlt.
-- Fiverr und Ref. 2024-123 gehören nicht sauber zur Rechnungsliste.
-- Adobe, Slack, Notion und Bankgebühren sind Ausgaben, keine Rechnungszahlungen.
-
-Erwartete Haupterkenntnisse:
-
-- Offen oder nicht vollständig bezahlt: 2025-053, 2025-055, 2025-056
-- Spät bezahlt: 2025-050
-- Unklare oder nicht zugeordnete Buchungen: Ref. 2024-123, Fiverr Auszahlung
-
-Referenz:
-
-- [artifacts/demo-answer-key.md](artifacts/demo-answer-key.md)
-
-### Demo 2: Vertrag prüfen
-
-Datei:
-
-- [artifacts/demo-vertrag.pdf](artifacts/demo-vertrag.pdf)
-
-Ziel:
-
-- riskante Vertragsklauseln erkennen
-- Konsequenzen in einfacher Sprache erklären
-
-Beispielprompt:
-
-```text
-Lies diesen Vertrag aus der Perspektive eines Freelancers. Fasse die wichtigsten Klauseln in einfachem Deutsch zusammen: Zahlungsbedingungen, Kündigungsfristen, Haftung und geistiges Eigentum. Markiere ungewöhnliche oder nachteilige Klauseln.
-```
-
-Erwartete Punkte:
-
-- 90 Tage Zahlungsziel
-- 3 Monate Kündigungsfrist plus automatische Verlängerung
-- Rechteübergang schon bei Erstellung
-- unbeschränkte Haftung
-- breites Wettbewerbsverbot
-
-### Demo 3: Posteingang priorisieren
-
-Datei:
-
-- [artifacts/demo-posteingang.txt](artifacts/demo-posteingang.txt)
-
-Ziel:
-
-- E-Mails priorisieren
-- heute, diese Woche und später unterscheiden
-
-Beispielprompt:
-
-```text
-Kategorisiere diese E-Mails nach Priorität: Heute antworten / Diese Woche / Keine Aktion nötig. Gib für jede E-Mail auch den empfohlenen Antwortton und den geschätzten Aufwand an.
-```
-
-### Demo 4: Offene Rechnungen nachverfolgen
-
-Datei:
-
-- [artifacts/demo-offene-rechnungen.xlsx](artifacts/demo-offene-rechnungen.xlsx)
-
-Ziel:
-
-- je nach Überfälligkeit den richtigen Ton treffen
-- sanfte, klare und formelle Mahnungen unterscheiden
-
-Beispielprompt:
-
-```text
-Diese Liste enthält Kunden mit überfälligen Zahlungen. Schreibe für jeden Kunden eine Zahlungserinnerung in dem zur Verzugsdauer passenden Ton: 1–14 Tage: freundlich und erinnernd; 15–30 Tage: bestimmt und klar; 30+ Tage: formell und ergebnisorientiert.
-```
+Jede Demo-Seite enthält die passende Datei, den Beispielprompt und eine Navigation zur nächsten Station.
 
 ## 6. Selbst Lernen
 
