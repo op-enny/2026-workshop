@@ -1,0 +1,370 @@
+{
+  "workshop": {
+    "name": "AI Workshop — Build Session",
+    "date": "2026-05-23",
+    "location": "SAALBAU Bornheim, Frankfurt am Main",
+    "context": "Demo files for a 4-hour design workshop for freelancers and small business owners. All data is entirely fictional but realistic for the Frankfurt freelance ecosystem. Mix of German and Turkish names reflecting local demographics.",
+    "language_note": "File content in German. Some client names may be Turkish (e.g. Yılmaz, Arslan) — this is intentional and realistic for Frankfurt."
+  },
+
+  "files": [
+
+    {
+      "id": "file_01",
+      "filename": "demo-kontoauszug.csv",
+      "format": "csv",
+      "encoding": "UTF-8",
+      "separator": ";",
+      "priority": "critical",
+      "workshop_block": "Block 1 — Opening demo",
+      "paired_with": "file_02",
+      "description": "Fictional bank statement for a Frankfurt-based freelancer. Contains 14 transactions over January–February 2026. Designed to be matched against the invoice list (file_02).",
+      "demo_prompt": {
+        "tr": "Bu banka ekstresindeki gelen ödemeleri, ekteki fatura listesiyle eşleştir. Üç tablo döndür: (1) eşleşen ödemeler, (2) ekstrede var ama faturada yok, (3) faturada var ama ödeme gelmemiş. Belirsiz eşleşmeleri işaretle.",
+        "de": "Gleiche die eingehenden Zahlungen aus diesem Kontoauszug mit der beigefügten Rechnungsliste ab. Erstelle drei Tabellen: (1) übereinstimmende Zahlungen, (2) Zahlungen ohne passende Rechnung, (3) Rechnungen ohne Zahlungseingang. Markiere unklare Übereinstimmungen."
+      },
+      "columns": ["Datum", "Buchungstext", "Betrag", "Kontostand"],
+      "data_rules": {
+        "date_range": "10.01.2026 – 12.02.2026",
+        "date_format": "DD.MM.YYYY",
+        "currency": "EUR",
+        "decimal_separator": ",",
+        "positive_values": "incoming payments",
+        "negative_values": "outgoing expenses",
+        "row_count": 14
+      },
+      "intentional_anomalies": [
+        {
+          "type": "name_mismatch",
+          "description": "Invoice is for 'Müller GmbH' but payment arrives labeled as 'K. Müller' — same client, different format",
+          "demo_value": "Claude flags fuzzy match, not just exact match — shows real-world complexity"
+        },
+        {
+          "type": "unknown_payment",
+          "description": "One incoming transfer of 400.00 EUR with reference 'Ref. 2024-123' — no matching invoice",
+          "demo_value": "Detects unexplained income — important for tax purposes"
+        },
+        {
+          "type": "platform_payout",
+          "description": "One payment from 'Fiverr Auszahlung' — platform payout, not a direct client payment",
+          "demo_value": "Demonstrates handling of non-invoice income streams"
+        },
+        {
+          "type": "partial_payment",
+          "description": "'Innovate GmbH' pays 1600.00 EUR but the invoice is for 3200.00 EUR — partial payment",
+          "demo_value": "Claude identifies partial payment and flags remaining balance"
+        },
+        {
+          "type": "outgoing_software_subscriptions",
+          "description": "3 outgoing transactions: Adobe Creative Cloud, Slack, Notion — not invoices, but business expenses",
+          "demo_value": "Claude separates operating expenses from receivables without being told"
+        }
+      ],
+      "sample_data": [
+        {"Datum": "10.01.2026", "Buchungstext": "Überweisung TechBau AG - Beratung Dezember 2025", "Betrag": "1800,00", "Kontostand": "7650,00"},
+        {"Datum": "13.01.2026", "Buchungstext": "Überweisung K. Müller - Webseite Redesign", "Betrag": "2400,00", "Kontostand": "10050,00"},
+        {"Datum": "15.01.2026", "Buchungstext": "Adobe Creative Cloud Abo", "Betrag": "-59,99", "Kontostand": "9990,01"},
+        {"Datum": "18.01.2026", "Buchungstext": "Überweisung Schmidt und Partner - Logo Überarbeitung", "Betrag": "850,00", "Kontostand": "10840,01"},
+        {"Datum": "20.01.2026", "Buchungstext": "Slack Technologies Ireland", "Betrag": "-12,50", "Kontostand": "10827,51"},
+        {"Datum": "22.01.2026", "Buchungstext": "Überweisung Yılmaz Danışmanlık - Rechnung Nov 2025", "Betrag": "950,00", "Kontostand": "11777,51"},
+        {"Datum": "25.01.2026", "Buchungstext": "Kontoführungsgebühr Januar 2026", "Betrag": "-8,50", "Kontostand": "11769,01"},
+        {"Datum": "28.01.2026", "Buchungstext": "Eingang Überweisung Ref. 2024-123", "Betrag": "400,00", "Kontostand": "12169,01"},
+        {"Datum": "31.01.2026", "Buchungstext": "Überweisung Bauer Immobilien GmbH - Präsentation Jan", "Betrag": "1200,00", "Kontostand": "13369,01"},
+        {"Datum": "03.02.2026", "Buchungstext": "Fiverr Auszahlung Januar", "Betrag": "285,00", "Kontostand": "13654,01"},
+        {"Datum": "05.02.2026", "Buchungstext": "Überweisung S. Arslan Grafik - Paket Basic", "Betrag": "650,00", "Kontostand": "14304,01"},
+        {"Datum": "08.02.2026", "Buchungstext": "Notion Business Plan", "Betrag": "-16,00", "Kontostand": "14288,01"},
+        {"Datum": "10.02.2026", "Buchungstext": "Überweisung Innovate GmbH - App UI Anzahlung", "Betrag": "1600,00", "Kontostand": "15888,01"},
+        {"Datum": "12.02.2026", "Buchungstext": "Überweisung Weber Consulting - Workshop Feb", "Betrag": "750,00", "Kontostand": "16638,01"}
+      ]
+    },
+
+    {
+      "id": "file_02",
+      "filename": "demo-rechnungsliste.xlsx",
+      "format": "xlsx",
+      "priority": "critical",
+      "workshop_block": "Block 1 — Opening demo",
+      "paired_with": "file_01",
+      "description": "Invoice list for the same freelancer, same period. Contains 10 invoices — some match the bank statement, some are still open.",
+      "sheets": [
+        {
+          "sheet_name": "Rechnungen",
+          "columns": ["Rechnungsnummer", "Datum", "Kunde", "Beschreibung", "Betrag_EUR", "Fälligkeitsdatum", "Zahlungsstatus"],
+          "status_values": ["Bezahlt", "OFFEN", "Spät bezahlt", "Teilweise bezahlt"],
+          "sample_data": [
+            {"Rechnungsnummer": "2025-047", "Datum": "05.01.2026", "Kunde": "TechBau AG", "Beschreibung": "IT-Beratung Dezember 2025", "Betrag_EUR": "1800,00", "Fälligkeitsdatum": "20.01.2026", "Zahlungsstatus": "Bezahlt"},
+            {"Rechnungsnummer": "2025-048", "Datum": "08.01.2026", "Kunde": "Müller GmbH", "Beschreibung": "Webseite Redesign Phase 2", "Betrag_EUR": "2400,00", "Fälligkeitsdatum": "22.01.2026", "Zahlungsstatus": "Bezahlt"},
+            {"Rechnungsnummer": "2025-049", "Datum": "10.01.2026", "Kunde": "Schmidt und Partner", "Beschreibung": "Logo-Überarbeitung inkl. Varianten", "Betrag_EUR": "850,00", "Fälligkeitsdatum": "24.01.2026", "Zahlungsstatus": "Bezahlt"},
+            {"Rechnungsnummer": "2025-050", "Datum": "12.01.2026", "Kunde": "Yılmaz Danışmanlık", "Beschreibung": "Strategieberatung November 2025", "Betrag_EUR": "950,00", "Fälligkeitsdatum": "26.01.2026", "Zahlungsstatus": "Spät bezahlt"},
+            {"Rechnungsnummer": "2025-051", "Datum": "15.01.2026", "Kunde": "Bauer Immobilien GmbH", "Beschreibung": "Investorenpräsentation Januar 2026", "Betrag_EUR": "1200,00", "Fälligkeitsdatum": "30.01.2026", "Zahlungsstatus": "Bezahlt"},
+            {"Rechnungsnummer": "2025-052", "Datum": "18.01.2026", "Kunde": "Selim Arslan Grafik", "Beschreibung": "Social Media Basic Paket", "Betrag_EUR": "650,00", "Fälligkeitsdatum": "02.02.2026", "Zahlungsstatus": "Bezahlt"},
+            {"Rechnungsnummer": "2025-053", "Datum": "20.01.2026", "Kunde": "Innovate GmbH", "Beschreibung": "App UI Konzept und Wireframes", "Betrag_EUR": "3200,00", "Fälligkeitsdatum": "05.02.2026", "Zahlungsstatus": "Teilweise bezahlt"},
+            {"Rechnungsnummer": "2025-054", "Datum": "22.01.2026", "Kunde": "Weber Consulting", "Beschreibung": "Workshop-Präsentation Februar 2026", "Betrag_EUR": "750,00", "Fälligkeitsdatum": "08.02.2026", "Zahlungsstatus": "Bezahlt"},
+            {"Rechnungsnummer": "2025-055", "Datum": "25.01.2026", "Kunde": "Kreativ Studio Bonn", "Beschreibung": "Motion Graphics Paket", "Betrag_EUR": "1450,00", "Fälligkeitsdatum": "10.02.2026", "Zahlungsstatus": "OFFEN"},
+            {"Rechnungsnummer": "2025-056", "Datum": "01.02.2026", "Kunde": "DataFlow UG", "Beschreibung": "Dashboard Entwicklung Modul 1", "Betrag_EUR": "2800,00", "Fälligkeitsdatum": "16.02.2026", "Zahlungsstatus": "OFFEN"}
+          ]
+        }
+      ],
+      "intentional_anomalies": [
+        {
+          "type": "partial_payment",
+          "description": "Innovate GmbH invoice is 3200 EUR but only 1600 EUR arrived in bank statement",
+          "demo_value": "Claude calculates and flags remaining 1600 EUR balance"
+        },
+        {
+          "type": "open_invoices",
+          "description": "Two invoices (Kreativ Studio Bonn, DataFlow UG) have no matching payment in bank statement",
+          "demo_value": "These show up in 'Rechnungen ohne Zahlungseingang' table"
+        },
+        {
+          "type": "late_payment",
+          "description": "Yılmaz Danışmanlık paid after due date",
+          "demo_value": "Claude can note lateness even when payment did arrive"
+        }
+      ]
+    },
+
+    {
+      "id": "file_03",
+      "filename": "demo-vertrag.pdf",
+      "format": "pdf",
+      "priority": "recommended",
+      "workshop_block": "Block 4 — Use case: contract review",
+      "description": "A realistic German freelance service contract (Dienstleistungsvertrag) of 2–3 pages. Contains several intentionally tricky or disadvantageous clauses for the freelancer.",
+      "demo_prompt": {
+        "tr": "Bu sözleşmeyi bir freelancer olarak oku. Dikkat etmem gereken maddeleri sade Türkçe olarak özetle. Özellikle: ödeme şartları, fesih koşulları, sorumluluk ve fikri mülkiyet. Riskli ya da alışılmadık maddeleri işaretle.",
+        "de": "Lies diesen Vertrag aus der Perspektive eines Freelancers. Fasse die wichtigsten Klauseln in einfachem Deutsch zusammen: Zahlungsbedingungen, Kündigungsfristen, Haftung und geistiges Eigentum. Markiere ungewöhnliche oder nachteilige Klauseln."
+      },
+      "document_structure": {
+        "parties": {
+          "auftraggeber": "Innovate GmbH, Hauptstraße 42, 60311 Frankfurt am Main",
+          "auftragnehmer": "[FREELANCER NAME], [ADRESSE]"
+        },
+        "sections": [
+          {
+            "title": "§1 Vertragsgegenstand",
+            "content": "Standard scope of services clause — UI/UX design and consulting. Nothing unusual here.",
+            "flag": false
+          },
+          {
+            "title": "§2 Vergütung und Zahlungsbedingungen",
+            "content": "Hourly rate 85 EUR. Invoices payable within 90 days of receipt.",
+            "flag": true,
+            "flag_reason": "90-day payment term is unusually long — standard is 14–30 days. Freelancer should notice this."
+          },
+          {
+            "title": "§3 Laufzeit und Kündigung",
+            "content": "Contract valid for 12 months with automatic renewal. Termination requires written notice 3 months before end of contract period.",
+            "flag": true,
+            "flag_reason": "3-month notice period AND automatic renewal is a trap — freelancer could be locked in unintentionally."
+          },
+          {
+            "title": "§4 Rechte an Arbeitsergebnissen",
+            "content": "All work results, including drafts and intermediate versions, become the exclusive property of Innovate GmbH upon creation, without additional compensation.",
+            "flag": true,
+            "flag_reason": "IP transfers upon creation (not upon payment). If client never pays, they still own the work. Major risk."
+          },
+          {
+            "title": "§5 Haftung",
+            "content": "The contractor is liable for all damages arising from the performance of the contract, including indirect and consequential damages, without limitation.",
+            "flag": true,
+            "flag_reason": "Unlimited liability including consequential damages is extremely unusual and dangerous for a freelancer."
+          },
+          {
+            "title": "§6 Geheimhaltung",
+            "content": "Standard NDA clause — confidentiality for 5 years after contract end. Reasonable.",
+            "flag": false
+          },
+          {
+            "title": "§7 Wettbewerbsverbot",
+            "content": "Freelancer may not work for direct competitors of Innovate GmbH for 12 months after contract end. List of competitors defined by Innovate GmbH at its sole discretion.",
+            "flag": true,
+            "flag_reason": "Non-compete with competitor list defined unilaterally by client is potentially very broad."
+          },
+          {
+            "title": "§8 Salvatorische Klausel",
+            "content": "Standard severability clause. Nothing unusual.",
+            "flag": false
+          }
+        ]
+      },
+      "generation_note": "Generate as a realistic formatted German legal document. Use professional legal language. Include Frankfurt as jurisdiction. Total length: 2–3 pages when formatted. Include signature blocks at the end."
+    },
+
+    {
+      "id": "file_04",
+      "filename": "demo-posteingang.txt",
+      "format": "txt",
+      "encoding": "UTF-8",
+      "priority": "recommended",
+      "workshop_block": "Block 4 — Use case: email triage (backup for Gmail connector)",
+      "description": "Simulated week inbox (7 emails) for a Frankfurt freelancer. Mix of German and Turkish. Used when Gmail connector is unavailable or as demo backup.",
+      "demo_prompt": {
+        "tr": "Bu e-postaları önceliğe göre sınıflandır: Bugün cevaplanmalı / Bu hafta / Eylem gerekmiyor. Her e-posta için önerilen yanıt tonunu ve tahmini süreyi de belirt.",
+        "de": "Kategorisiere diese E-Mails nach Priorität: Heute antworten / Diese Woche / Keine Aktion nötig. Gib für jede E-Mail auch den empfohlenen Antwortton und den geschätzten Aufwand an."
+      },
+      "email_format": "From: [sender]\nTo: freelancer@example.com\nDate: [date]\nSubject: [subject]\n\n[body]\n\n---",
+      "emails": [
+        {
+          "id": "email_01",
+          "from": "stefan.wagner@techbau-ag.de",
+          "date": "Mo, 18.05.2026, 08:15",
+          "subject": "Dringende Anfrage: Präsentation für Donnerstag",
+          "body": "Hallo, wir haben am Donnerstag ein wichtiges Investorengespräch. Können Sie bis Mittwoch 18 Uhr eine überarbeitete Version der Präsentation liefern? Ich weiß, es ist kurzfristig, aber das ist wirklich sehr wichtig für uns. Bitte bestätigen Sie kurz.",
+          "priority": "high",
+          "demo_flag": "Scope change with tight deadline — needs urgent response and possible renegotiation"
+        },
+        {
+          "id": "email_02",
+          "from": "no-reply@newsletter-marketing.de",
+          "date": "Mo, 18.05.2026, 09:02",
+          "subject": "🚀 10 Tools die Ihr Business revolutionieren!",
+          "body": "Entdecken Sie die neuesten Marketing-Tools 2026! Jetzt kostenlos testen...",
+          "priority": "none",
+          "demo_flag": "Clear spam/newsletter — no action needed"
+        },
+        {
+          "id": "email_03",
+          "from": "s.arslan@arslan-grafik.de",
+          "date": "Mo, 18.05.2026, 10:30",
+          "subject": "Re: Rechnung 2025-052 — Zahlung erfolgt",
+          "body": "Merhaba, geçen hafta ödemeyi yaptık. Hesabınıza ulaşmış olması lazım. Makbuzu ektedir. İyi çalışmalar!",
+          "priority": "low",
+          "demo_flag": "Payment confirmation — just needs acknowledgment, filed away",
+          "language": "Turkish"
+        },
+        {
+          "id": "email_04",
+          "from": "buchhaltung@innovate-gmbh.de",
+          "date": "Mo, 18.05.2026, 11:15",
+          "subject": "Rechnung 2025-053 — Rückfrage Zahlungsplan",
+          "body": "Sehr geehrte/r Auftragnehmer/in, bezüglich Ihrer Rechnung über 3.200 EUR: Aufgrund interner Budgetbeschränkungen bitten wir um Ihr Einverständnis für eine Zahlung in zwei Raten (je 1.600 EUR, jeweils zum 15. des Monats). Bitte teilen Sie uns Ihre Entscheidung bis Freitag mit.",
+          "priority": "high",
+          "demo_flag": "Client requesting payment plan for a large invoice — needs decision and response by Friday"
+        },
+        {
+          "id": "email_05",
+          "from": "m.hoffmann@kreativ-studio.de",
+          "date": "Di, 19.05.2026, 09:00",
+          "subject": "Offene Rechnung 2025-055 — bereits 9 Tage überfällig",
+          "body": "Guten Morgen, ich möchte Sie freundlich daran erinnern, dass unsere Rechnung über 1.450 EUR seit dem 10.05. überfällig ist. Könnten Sie uns bitte den Zahlungsstatus mitteilen? Vielen Dank.",
+          "priority": "medium",
+          "demo_flag": "Overdue invoice from a client — needs a response confirming payment is coming (or asking for patience)"
+        },
+        {
+          "id": "email_06",
+          "from": "ana.lima@xdesign-porto.pt",
+          "date": "Di, 19.05.2026, 14:20",
+          "subject": "Potential collaboration — UI project",
+          "body": "Hi, I found your profile on LinkedIn. We're a design agency based in Porto and we're looking for a German-based UX consultant for a 3-month project starting in July. Would you be interested in a quick call this week?",
+          "priority": "medium",
+          "demo_flag": "New business opportunity — not urgent but worth a reply this week",
+          "language": "English"
+        },
+        {
+          "id": "email_07",
+          "from": "k.weber@weber-consulting.com",
+          "date": "Mi, 20.05.2026, 08:45",
+          "subject": "Feedback zum Workshop — einfach super!",
+          "body": "Hallo, ich wollte mich noch kurz für den tollen Workshop letzten Freitag bedanken. Sehr praxisnah, sehr gut vorbereitet. Ich habe Ihren Kontakt bereits an zwei Kollegen weitergegeben. Machen Sie weiter so!",
+          "priority": "low",
+          "demo_flag": "Positive feedback + referral — warm reply, no urgency"
+        }
+      ]
+    },
+
+    {
+      "id": "file_05",
+      "filename": "demo-offene-rechnungen.xlsx",
+      "format": "xlsx",
+      "priority": "recommended",
+      "workshop_block": "Block 4 — Use case: late payment follow-up",
+      "description": "Overdue invoice tracking sheet. Used to generate escalating payment reminder emails tailored to each client and overdue duration.",
+      "demo_prompt": {
+        "tr": "Bu listede gecikmiş ödeme olan müşteriler var. Her biri için, gecikme süresine uygun tonda bir hatırlatma e-postası yaz: 1–14 gün için nazik ve hatırlatıcı, 15–30 gün için kararlı ve net, 30+ gün için resmi ve sonuç odaklı.",
+        "de": "Diese Liste enthält Kunden mit überfälligen Zahlungen. Schreibe für jeden Kunden eine Zahlungserinnerung in dem zur Verzugsdauer passenden Ton: 1–14 Tage: freundlich und erinnernd; 15–30 Tage: bestimmt und klar; 30+ Tage: formell und ergebnisorientiert."
+      },
+      "sheets": [
+        {
+          "sheet_name": "Überfällige Rechnungen",
+          "columns": ["Rechnungsnummer", "Kunde", "Kontaktperson", "Betrag_EUR", "Fälligkeitsdatum", "Tage_überfällig", "Kategorie", "Notiz"],
+          "overdue_categories": {
+            "1_bis_14": "Freundliche Erinnerung",
+            "15_bis_30": "Zweite Mahnung",
+            "über_30": "Letzte Mahnung / Inkasso"
+          },
+          "sample_data": [
+            {
+              "Rechnungsnummer": "2025-055",
+              "Kunde": "Kreativ Studio Bonn",
+              "Kontaktperson": "M. Hoffmann",
+              "Betrag_EUR": "1450,00",
+              "Fälligkeitsdatum": "10.05.2026",
+              "Tage_überfällig": 9,
+              "Kategorie": "Freundliche Erinnerung",
+              "Notiz": "Erster Kontakt, gute Geschäftsbeziehung"
+            },
+            {
+              "Rechnungsnummer": "2025-044",
+              "Kunde": "Grafikbüro Sternberg",
+              "Kontaktperson": "L. Sternberg",
+              "Betrag_EUR": "680,00",
+              "Fälligkeitsdatum": "28.04.2026",
+              "Tage_überfällig": 22,
+              "Kategorie": "Zweite Mahnung",
+              "Notiz": "Erste Erinnerung ignoriert"
+            },
+            {
+              "Rechnungsnummer": "2025-039",
+              "Kunde": "MediaWave UG",
+              "Kontaktperson": "T. Krause",
+              "Betrag_EUR": "2100,00",
+              "Fälligkeitsdatum": "10.04.2026",
+              "Tage_überfällig": 40,
+              "Kategorie": "Letzte Mahnung / Inkasso",
+              "Notiz": "Zwei Mahnungen ignoriert, keine Rückmeldung"
+            },
+            {
+              "Rechnungsnummer": "2025-058",
+              "Kunde": "Demir Textil GmbH",
+              "Kontaktperson": "C. Demir",
+              "Betrag_EUR": "920,00",
+              "Fälligkeitsdatum": "14.05.2026",
+              "Tage_überfällig": 5,
+              "Kategorie": "Freundliche Erinnerung",
+              "Notiz": "Neukunde, erster Auftrag"
+            },
+            {
+              "Rechnungsnummer": "2025-046",
+              "Kunde": "Stadtbau Frankfurt eG",
+              "Kontaktperson": "R. Fischer",
+              "Betrag_EUR": "3750,00",
+              "Fälligkeitsdatum": "01.05.2026",
+              "Tage_überfällig": 18,
+              "Kategorie": "Zweite Mahnung",
+              "Notiz": "Großkunde — Ton beachten"
+            }
+          ]
+        }
+      ]
+    }
+
+  ],
+
+  "realism_rules": {
+    "client_names": "Mix of German company names (GmbH, UG, AG) and German/Turkish personal names. No fictional famous brands. Use realistic Frankfurt-area business names.",
+    "amounts": "Realistic freelancer invoice amounts: 500–4000 EUR per invoice. No round numbers for bank statement balances.",
+    "dates": "All dates in 2026, mostly January–February. Use DD.MM.YYYY format in German files.",
+    "consistency": "Client names must be consistent across file_01 and file_02, except for the intentional name_mismatch anomaly (Müller GmbH vs K. Müller).",
+    "language": "All file headers, labels and main content in German. Turkish names and phrases are allowed as part of realistic Frankfurt context.",
+    "sensitive_data": "No real personal data, real IBANs, real addresses. All fictional. IBAN format should be invalid (e.g. DE00 0000 0000 0000 0000 00) to avoid accidental real-world use."
+  },
+
+  "generation_instructions": {
+    "file_01_csv": "Generate as plain CSV with semicolon separator. UTF-8 encoding. First row is header.",
+    "file_02_xlsx": "Generate as Excel file with one sheet named 'Rechnungen'. Bold header row. Status column: use color coding if possible (green=Bezahlt, red=OFFEN, orange=Teilweise bezahlt).",
+    "file_03_pdf": "Generate as a formatted 2-3 page German legal document. Professional typography. Include article numbers (§1, §2...). Signature block at end with date and place fields. Frankfurt jurisdiction.",
+    "file_04_txt": "Plain text file. Emails separated by '---'. Each email starts with From/To/Date/Subject header block.",
+    "file_05_xlsx": "Generate as Excel with one sheet. Bold header. Tage_überfällig column: conditional formatting — green <14, orange 15-30, red >30 if supported."
+  }
+}

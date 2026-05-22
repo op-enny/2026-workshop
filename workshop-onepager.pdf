@@ -1,0 +1,134 @@
+%PDF-1.4
+%‚„œ”
+1 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
+endobj
+2 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold >>
+endobj
+3 0 obj
+<< /Length 1500 >>
+stream
+BT
+/F2 22 Tf
+50 790 Td
+(AI Workshop ó Build Session) Tj
+ET
+BT
+/F1 11 Tf
+50 762 Td
+(2026-05-23 | SAALBAU Bornheim, Frankfurt am Main) Tj
+ET
+q
+0.75 w
+50 742 m 545 742 l S
+Q
+BT
+/F2 12 Tf
+50 728 Td
+(WORKSHOP FOCUS) Tj
+ET
+BT
+/F1 11 Tf
+50 710 Td
+(- Demo 1: Kontoauszug und Rechnungsliste abgleichen) Tj
+ET
+BT
+/F1 11 Tf
+50 694 Td
+(- offene, verspaetete und teilweise bezahlte Rechnungen erkennen) Tj
+ET
+BT
+/F1 11 Tf
+50 678 Td
+(- unklare Treffer, Fremdzahlungen und Ausgaben sauber trennen) Tj
+ET
+BT
+/F2 12 Tf
+50 658 Td
+(PROMPT FUER DEMO 1) Tj
+ET
+BT
+/F1 11 Tf
+50 640 Td
+(Gleiche die eingehenden Zahlungen mit der Rechnungsliste ab und liefere:) Tj
+ET
+BT
+/F1 11 Tf
+50 624 Td
+(1\) passende Zahlungen  2\) Zahlungen ohne Rechnung  3\) Rechnungen ohne Zahlung) Tj
+ET
+BT
+/F2 12 Tf
+50 604 Td
+(BACKUP-DEMOS) Tj
+ET
+BT
+/F1 11 Tf
+50 586 Td
+(- Vertrag: riskante Klauseln in einfachem Deutsch markieren) Tj
+ET
+BT
+/F1 11 Tf
+50 570 Td
+(- Posteingang: E-Mails nach Prioritaet sortieren) Tj
+ET
+BT
+/F1 11 Tf
+50 554 Td
+(- Offene Rechnungen: passende Zahlungserinnerungen formulieren) Tj
+ET
+BT
+/F2 12 Tf
+50 534 Td
+(WORAUF ACHTEN) Tj
+ET
+BT
+/F1 11 Tf
+50 516 Td
+(- nicht nur exakte Namensmatches akzeptieren) Tj
+ET
+BT
+/F1 11 Tf
+50 500 Td
+(- Teilzahlungen, Namensvarianten und Faelligkeiten sichtbar machen) Tj
+ET
+BT
+/F1 11 Tf
+50 484 Td
+(- Ergebnisse immer als Tabelle oder klare Liste ausgeben lassen) Tj
+ET
+q
+0.75 w
+50 464 m 545 464 l S
+Q
+BT
+/F1 10 Tf
+50 452 Td
+(Alle Daten sind fiktiv, aber bewusst realistisch gestaltet.) Tj
+ET
+endstream
+endobj
+4 0 obj
+<< /Type /Page /Parent 4 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 1 0 R /F2 2 0 R >> >> /Contents 3 0 R >>
+endobj
+5 0 obj
+<< /Type /Pages /Count 1 /Kids [4 0 R] >>
+endobj
+6 0 obj
+<< /Type /Catalog /Pages 5 0 R >>
+endobj
+xref
+0 7
+0000000000 65535 f 
+0000000015 00000 n 
+0000000085 00000 n 
+0000000160 00000 n 
+0000001712 00000 n 
+0000001848 00000 n 
+0000001905 00000 n 
+trailer
+<< /Size 7 /Root 6 0 R >>
+startxref
+1954
+%%EOF
