@@ -12,17 +12,17 @@ Freelancer'lar, küçük işletmeler, ajanslar, ofis ekipleri, danışmanlık ve
 
 ## 3. Repo İçeriği
 
-- [demo-kontoauszug.csv](demo-kontoauszug.csv): Banka ekstresi
-- [demo-rechnungsliste.xlsx](demo-rechnungsliste.xlsx): Fatura listesi
-- [demo-vertrag.pdf](demo-vertrag.pdf): Sözleşme demosu
-- [demo-posteingang.txt](demo-posteingang.txt): E-posta önceliklendirme demosu
-- [demo-offene-rechnungen.xlsx](demo-offene-rechnungen.xlsx): Gecikmiş ödemeler demosu
-- [demo_data](demo_data): Tekil fatura PDF'leri
-- [workshop-demo-guide.md](workshop-demo-guide.md): Moderatör rehberi
-- [demo-answer-key.md](demo-answer-key.md): Beklenen sonuçlar
-- [workshop-onepager.md](workshop-onepager.md): Kısa özet
-- [workshop-onepager.pdf](workshop-onepager.pdf): Yazdırılabilir one-pager
-- [demo-files-spec.json](demo-files-spec.json): Merkezi spesifikasyon
+- [artifacts/demo-kontoauszug.csv](artifacts/demo-kontoauszug.csv): Banka ekstresi
+- [artifacts/demo-rechnungsliste.xlsx](artifacts/demo-rechnungsliste.xlsx): Fatura listesi
+- [artifacts/demo-vertrag.pdf](artifacts/demo-vertrag.pdf): Sözleşme demosu
+- [artifacts/demo-posteingang.txt](artifacts/demo-posteingang.txt): E-posta önceliklendirme demosu
+- [artifacts/demo-offene-rechnungen.xlsx](artifacts/demo-offene-rechnungen.xlsx): Gecikmiş ödemeler demosu
+- [artifacts/demo_data](artifacts/demo_data): Tekil fatura PDF'leri
+- [artifacts/workshop-demo-guide.md](artifacts/workshop-demo-guide.md): Moderatör rehberi
+- [artifacts/demo-answer-key.md](artifacts/demo-answer-key.md): Beklenen sonuçlar
+- [artifacts/workshop-onepager.md](artifacts/workshop-onepager.md): Kısa özet
+- [artifacts/workshop-onepager.pdf](artifacts/workshop-onepager.pdf): Yazdırılabilir one-pager
+- [artifacts/demo-files-spec.json](artifacts/demo-files-spec.json): Merkezi spesifikasyon
 
 ## 4. Hızlı Başlangıç
 
@@ -36,8 +36,8 @@ Freelancer'lar, küçük işletmeler, ajanslar, ofis ekipleri, danışmanlık ve
 
 Dosyalar:
 
-- [demo-kontoauszug.csv](demo-kontoauszug.csv)
-- [demo-rechnungsliste.xlsx](demo-rechnungsliste.xlsx)
+- [artifacts/demo-kontoauszug.csv](artifacts/demo-kontoauszug.csv)
+- [artifacts/demo-rechnungsliste.xlsx](artifacts/demo-rechnungsliste.xlsx)
 
 Amaç:
 
@@ -67,13 +67,13 @@ Beklenen ana sonuçlar:
 
 Referans:
 
-- [demo-answer-key.md](demo-answer-key.md)
+- [artifacts/demo-answer-key.md](artifacts/demo-answer-key.md)
 
 ### Demo 2: Sözleşme inceleme
 
 Dosya:
 
-- [demo-vertrag.pdf](demo-vertrag.pdf)
+- [artifacts/demo-vertrag.pdf](artifacts/demo-vertrag.pdf)
 
 Amaç:
 
@@ -98,7 +98,7 @@ Beklenen noktalar:
 
 Dosya:
 
-- [demo-posteingang.txt](demo-posteingang.txt)
+- [artifacts/demo-posteingang.txt](artifacts/demo-posteingang.txt)
 
 Amaç:
 
@@ -115,7 +115,7 @@ Bu e-postaları önceliğe göre sınıflandır: Bugün cevaplanmalı / Bu hafta
 
 Dosya:
 
-- [demo-offene-rechnungen.xlsx](demo-offene-rechnungen.xlsx)
+- [artifacts/demo-offene-rechnungen.xlsx](artifacts/demo-offene-rechnungen.xlsx)
 
 Amaç:
 
@@ -132,15 +132,15 @@ Bu listede gecikmiş ödeme olan müşteriler var. Her biri için, gecikme süre
 
 1. Sadece ilgili bloktaki dosyaları aç.
 2. Önce kendi prompt'unu yaz.
-3. Sonucu [demo-answer-key.md](demo-answer-key.md) ile karşılaştır.
+3. Sonucu [artifacts/demo-answer-key.md](artifacts/demo-answer-key.md) ile karşılaştır.
 4. Prompt'u daha iyi şekilde yeniden yaz.
 5. Yapı ile sonuç kalitesinin nasıl değiştiğini gözlemle.
 
 ## 7. Eğitmen İçin
 
-- Akış için [workshop-demo-guide.md](workshop-demo-guide.md) dosyasını kullan.
-- Handout olarak [workshop-onepager.pdf](workshop-onepager.pdf) dosyasını kullan.
-- İç referans için [demo-answer-key.md](demo-answer-key.md) dosyasını kullan.
+- Akış için [artifacts/workshop-demo-guide.md](artifacts/workshop-demo-guide.md) dosyasını kullan.
+- Handout olarak [artifacts/workshop-onepager.pdf](artifacts/workshop-onepager.pdf) dosyasını kullan.
+- İç referans için [artifacts/demo-answer-key.md](artifacts/demo-answer-key.md) dosyasını kullan.
 
 ## 8. Public Repo Notları
 

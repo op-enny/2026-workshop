@@ -12,17 +12,17 @@ Freelancer, kleine Unternehmen, Agenturen, Office-Teams, Beratungs- und Backoffi
 
 ## 3. Repo-Inhalt
 
-- [demo-kontoauszug.csv](demo-kontoauszug.csv): Kontoauszug
-- [demo-rechnungsliste.xlsx](demo-rechnungsliste.xlsx): Rechnungsliste
-- [demo-vertrag.pdf](demo-vertrag.pdf): Vertragsdemo
-- [demo-posteingang.txt](demo-posteingang.txt): E-Mail-Triage-Demo
-- [demo-offene-rechnungen.xlsx](demo-offene-rechnungen.xlsx): Offene Rechnungen
-- [demo_data](demo_data): Einzelne Rechnungs-PDFs
-- [workshop-demo-guide.md](workshop-demo-guide.md): Moderator-Guide
-- [demo-answer-key.md](demo-answer-key.md): Erwartete Ergebnisse
-- [workshop-onepager.md](workshop-onepager.md): Kurzüberblick
-- [workshop-onepager.pdf](workshop-onepager.pdf): Printable one-pager
-- [demo-files-spec.json](demo-files-spec.json): Zentrale Spezifikation
+- [artifacts/demo-kontoauszug.csv](artifacts/demo-kontoauszug.csv): Kontoauszug
+- [artifacts/demo-rechnungsliste.xlsx](artifacts/demo-rechnungsliste.xlsx): Rechnungsliste
+- [artifacts/demo-vertrag.pdf](artifacts/demo-vertrag.pdf): Vertragsdemo
+- [artifacts/demo-posteingang.txt](artifacts/demo-posteingang.txt): E-Mail-Triage-Demo
+- [artifacts/demo-offene-rechnungen.xlsx](artifacts/demo-offene-rechnungen.xlsx): Offene Rechnungen
+- [artifacts/demo_data](artifacts/demo_data): Einzelne Rechnungs-PDFs
+- [artifacts/workshop-demo-guide.md](artifacts/workshop-demo-guide.md): Moderator-Guide
+- [artifacts/demo-answer-key.md](artifacts/demo-answer-key.md): Erwartete Ergebnisse
+- [artifacts/workshop-onepager.md](artifacts/workshop-onepager.md): Kurzüberblick
+- [artifacts/workshop-onepager.pdf](artifacts/workshop-onepager.pdf): Printable one-pager
+- [artifacts/demo-files-spec.json](artifacts/demo-files-spec.json): Zentrale Spezifikation
 
 ## 4. Schnellstart
 
@@ -36,8 +36,8 @@ Freelancer, kleine Unternehmen, Agenturen, Office-Teams, Beratungs- und Backoffi
 
 Dateien:
 
-- [demo-kontoauszug.csv](demo-kontoauszug.csv)
-- [demo-rechnungsliste.xlsx](demo-rechnungsliste.xlsx)
+- [artifacts/demo-kontoauszug.csv](artifacts/demo-kontoauszug.csv)
+- [artifacts/demo-rechnungsliste.xlsx](artifacts/demo-rechnungsliste.xlsx)
 
 Ziel:
 
@@ -67,13 +67,13 @@ Erwartete Haupterkenntnisse:
 
 Referenz:
 
-- [demo-answer-key.md](demo-answer-key.md)
+- [artifacts/demo-answer-key.md](artifacts/demo-answer-key.md)
 
 ### Demo 2: Vertrag prüfen
 
 Datei:
 
-- [demo-vertrag.pdf](demo-vertrag.pdf)
+- [artifacts/demo-vertrag.pdf](artifacts/demo-vertrag.pdf)
 
 Ziel:
 
@@ -98,7 +98,7 @@ Erwartete Punkte:
 
 Datei:
 
-- [demo-posteingang.txt](demo-posteingang.txt)
+- [artifacts/demo-posteingang.txt](artifacts/demo-posteingang.txt)
 
 Ziel:
 
@@ -115,7 +115,7 @@ Kategorisiere diese E-Mails nach Priorität: Heute antworten / Diese Woche / Kei
 
 Datei:
 
-- [demo-offene-rechnungen.xlsx](demo-offene-rechnungen.xlsx)
+- [artifacts/demo-offene-rechnungen.xlsx](artifacts/demo-offene-rechnungen.xlsx)
 
 Ziel:
 
@@ -132,15 +132,15 @@ Diese Liste enthält Kunden mit überfälligen Zahlungen. Schreibe für jeden Ku
 
 1. Öffne nur die Dateien für einen Block.
 2. Schreibe zuerst einen eigenen Prompt.
-3. Vergleiche dein Ergebnis mit [demo-answer-key.md](demo-answer-key.md).
+3. Vergleiche dein Ergebnis mit [artifacts/demo-answer-key.md](artifacts/demo-answer-key.md).
 4. Formuliere den Prompt noch einmal besser.
 5. Beobachte, wie sich Struktur und Ergebnisqualität verändern.
 
 ## 7. Für Trainer
 
-- Nutze [workshop-demo-guide.md](workshop-demo-guide.md) als Ablaufhilfe.
-- Nutze [workshop-onepager.pdf](workshop-onepager.pdf) als Handout.
-- Nutze [demo-answer-key.md](demo-answer-key.md) als internen Referenzrahmen.
+- Nutze [artifacts/workshop-demo-guide.md](artifacts/workshop-demo-guide.md) als Ablaufhilfe.
+- Nutze [artifacts/workshop-onepager.pdf](artifacts/workshop-onepager.pdf) als Handout.
+- Nutze [artifacts/demo-answer-key.md](artifacts/demo-answer-key.md) als internen Referenzrahmen.
 
 ## 8. Hinweise zur Veröffentlichung
 
