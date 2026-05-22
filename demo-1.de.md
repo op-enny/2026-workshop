@@ -25,7 +25,7 @@
 ## Beispielprompt
 
 ```text
-Ich lade dir jetzt mehrere Rechnungen als PDF hoch. Alternativ sende ich dir direkte GitHub-Dateilinks zu diesen PDFs. Lies alle Rechnungen und erstelle daraus eine CSV-Datei mit den Spalten Rechnungsnummer, Kunde, Datum, Betrag, Fälligkeitsdatum und Zahlungsstatus. Nutze diese CSV anschließend zusammen mit dem Kontoauszug für den Abgleich. Erstelle drei Tabellen: (1) übereinstimmende Zahlungen, (2) Zahlungen ohne passende Rechnung, (3) Rechnungen ohne Zahlungseingang. Markiere unklare Übereinstimmungen.
+Ich lade dir jetzt mehrere Rechnungen als PDF hoch. Alternativ sende ich dir direkte GitHub-Dateilinks zu diesen PDFs. Lies alle Rechnungen und erstelle daraus zuerst eine saubere CSV-Datei mit den Spalten Rechnungsnummer, Kunde, Datum, Betrag, Fälligkeitsdatum und Zahlungsstatus. Gleiche danach die CSV mit dem beigefügten Kontoauszug ab. Erstelle vier Ausgaben: (1) eindeutig passende Zahlungen, (2) unscharfe oder manuell zu prüfende Zuordnungen, (3) Zahlungen ohne passende Rechnung, (4) Rechnungen ohne oder ohne vollständigen Zahlungseingang. Achte ausdrücklich auf Namensvarianten, Teilzahlungen und Ausgaben, die keine Rechnungszahlungen sind. Begründe jede unsichere Zuordnung kurz.
 ```
 
 ## Worauf man achten sollte

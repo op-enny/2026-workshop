@@ -25,7 +25,7 @@
 ## Örnek prompt
 
 ```text
-Sana şimdi birden fazla faturayı PDF olarak yükleyeceğim. Alternatif olarak her PDF için doğrudan GitHub dosya linki de paylaşabilirim. Bu faturaların hepsini okuyup fatura numarası, müşteri, tarih, tutar, vade tarihi ve ödeme durumu sütunlarını içeren bir CSV fatura listesi oluştur. Sonra bu banka ekstresindeki gelen ödemeleri bu CSV ile eşleştir. Üç tablo döndür: (1) eşleşen ödemeler, (2) ekstrede var ama faturada yok, (3) faturada var ama ödeme gelmemiş. Belirsiz eşleşmeleri işaretle.
+Sana şimdi birden fazla faturayı PDF olarak yükleyeceğim. Alternatif olarak her PDF için doğrudan GitHub dosya linki de paylaşabilirim. Önce bu faturaların hepsini okuyup fatura numarası, müşteri, tarih, tutar, vade tarihi ve ödeme durumu sütunlarını içeren temiz bir CSV fatura listesi oluştur. Sonra bu CSV'yi ekteki banka ekstresi ile eşleştir. Dört çıktı üret: (1) net eşleşen ödemeler, (2) belirsiz veya manuel kontrol gerektiren eşleşmeler, (3) ekstrede olup faturada olmayan ödemeler, (4) faturada olup hiç ödenmemiş ya da kısmi ödenmiş kayıtlar. Özellikle isim varyasyonlarına, kısmi ödemelere ve fatura tahsilatı olmayan gider/hareketlere dikkat et. Belirsiz eşleşmeler için kısa gerekçe yaz.
 ```
 
 ## Dikkat edilmesi gerekenler

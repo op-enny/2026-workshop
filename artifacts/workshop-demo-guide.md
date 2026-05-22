@@ -24,7 +24,8 @@ Schritte mit Claude:
 Prompt DE:
 Ich lade dir jetzt mehrere Rechnungen als PDF hoch. Alternativ sende ich dir direkte Dateilinks zu diesen PDFs.
 Lies alle Rechnungen und erstelle daraus eine CSV-Datei mit Rechnungsnummer, Kunde, Datum, Betrag, Falligkeitsdatum und Zahlungsstatus.
-Gleiche danach die eingehenden Zahlungen aus diesem Kontoauszug mit dieser CSV ab. Erstelle drei Tabellen: (1) ubereinstimmende Zahlungen, (2) Zahlungen ohne passende Rechnung, (3) Rechnungen ohne Zahlungseingang. Markiere unklare Ubereinstimmungen.
+Gleiche danach die eingehenden Zahlungen aus diesem Kontoauszug mit dieser CSV ab. Erstelle vier Ausgaben: (1) eindeutige Treffer, (2) unscharfe Treffer, (3) Zahlungen ohne Rechnung, (4) Rechnungen ohne oder ohne vollstandigen Zahlungseingang.
+Berucksichtige Namensvarianten, Teilzahlungen und Ausgaben, die keine Rechnungszahlungen sind. Begrunde unsichere Treffer kurz.
 
 ## Block 4: Backup-Szenarien
 

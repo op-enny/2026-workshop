@@ -25,7 +25,7 @@ Schritte mit Claude:
 
 Beispielprompt:
 Ich lade dir jetzt mehrere Rechnungen als PDF hoch. Alternativ sende ich dir direkte Dateilinks zu diesen PDFs. Lies alle Rechnungen und erstelle daraus eine CSV-Rechnungsliste mit Rechnungsnummer, Kunde, Datum, Betrag, Falligkeitsdatum und Zahlungsstatus.
-Gleiche danach die eingehenden Zahlungen aus dem Kontoauszug mit dieser CSV-Liste ab und markiere unklare Treffer.
+Gleiche danach die eingehenden Zahlungen aus dem Kontoauszug mit dieser CSV-Liste ab. Trenne eindeutige Treffer, unscharfe Treffer, Zahlungen ohne Rechnung und Rechnungen ohne oder ohne vollstandigen Zahlungseingang.
 
 ## Backup-Demos
 
