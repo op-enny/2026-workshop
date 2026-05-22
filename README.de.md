@@ -56,6 +56,3 @@ Jede Demo-Seite enthält die passende Datei, den Beispielprompt und eine Navigat
 
 Alle Daten in diesem Repository sind fiktiv. Es gibt keine echten Konten, keine echten Rechnungen und keine echten personenbezogenen Daten.
 
-## 9. Optionaler Nächster Schritt
-
-Wenn du das Repository öffentlich teilst, ist es sinnvoll, Issues oder Discussions für Fragen von Teilnehmenden zu aktivieren.

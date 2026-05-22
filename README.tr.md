@@ -56,6 +56,3 @@ Her demo sayfasında ilgili dosya, örnek prompt ve bir sonraki adıma geçiş l
 
 Bu repo içindeki tüm veriler kurgusaldır. Gerçek hesap, gerçek fatura veya gerçek kişisel veri içermez.
 
-## 9. İsteğe Bağlı Sonraki Adım
-
-Repo'yu public paylaşacaksan, katılımcı soruları için Issues veya Discussions bölümünü aktif etmek faydalı olur.
