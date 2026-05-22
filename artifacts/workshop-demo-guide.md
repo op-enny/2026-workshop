@@ -7,15 +7,23 @@ Ort: SAALBAU Bornheim, Frankfurt am Main
 
 Dateien:
 - demo-kontoauszug.csv
-- demo-rechnungsliste.xlsx
+- demo_data/ (Rechnungs-PDFs als Quelle fur die Liste)
 
 Ziel:
+- aus den Rechnungs-PDFs erst eine Rechnungsliste ableiten
 - Zahlungen matchen
 - fehlende Zahlungen erkennen
 - unscharfe Treffer und Anomalien markieren
 
+Schritte mit Claude:
+1. Ordner demo_data mit den Rechnungs-PDFs oeffnen.
+2. Claude anweisen, alle PDFs im Ordner zu lesen und daraus eine CSV mit Rechnungsnummer, Kunde, Datum, Betrag, Falligkeitsdatum und Zahlungsstatus zu erstellen.
+3. Diese CSV danach fuer den Abgleich mit dem Kontoauszug verwenden.
+
 Prompt DE:
-Gleiche die eingehenden Zahlungen aus diesem Kontoauszug mit der beigefügten Rechnungsliste ab. Erstelle drei Tabellen: (1) übereinstimmende Zahlungen, (2) Zahlungen ohne passende Rechnung, (3) Rechnungen ohne Zahlungseingang. Markiere unklare Übereinstimmungen.
+Ich habe meine Rechnungen bereits erstellt. Sie liegen als PDF-Dateien im Ordner demo_data.
+Lies alle PDFs in diesem Ordner und erstelle daraus eine CSV-Datei mit Rechnungsnummer, Kunde, Datum, Betrag, Falligkeitsdatum und Zahlungsstatus.
+Gleiche danach die eingehenden Zahlungen aus diesem Kontoauszug mit dieser CSV ab. Erstelle drei Tabellen: (1) ubereinstimmende Zahlungen, (2) Zahlungen ohne passende Rechnung, (3) Rechnungen ohne Zahlungseingang. Markiere unklare Ubereinstimmungen.
 
 ## Block 4: Backup-Szenarien
 

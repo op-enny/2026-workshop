@@ -9,16 +9,23 @@ Ort: SAALBAU Bornheim, Frankfurt am Main
 - Unklare Fälle, Ausnahmen und Risiken sichtbar machen
 - Prompts so formulieren, dass sofort nutzbare Ergebnisse entstehen
 
-## Demo 1: Kontoauszug + Rechnungsliste
+## Demo 1: Kontoauszug + Rechnungsliste aufbauen
 
-Dateien: demo-kontoauszug.csv, demo-rechnungsliste.xlsx
+Dateien: demo-kontoauszug.csv, demo_data/
 Aufgabe:
+- aus den Rechnungs-PDFs erst eine kompakte Rechnungsliste erstellen
 - Zahlungen mit Rechnungen abgleichen
 - offene und nur teilweise bezahlte Rechnungen finden
 - unklare Treffer und fremde Zahlungseingänge markieren
 
+Schritte mit Claude:
+- PDFs in demo_data von Claude auslesen lassen
+- daraus eine CSV-Rechnungsliste erzeugen lassen
+- die CSV dann mit dem Kontoauszug abgleichen
+
 Beispielprompt:
-Gleiche die eingehenden Zahlungen aus diesem Kontoauszug mit der beigefügten Rechnungsliste ab. Erstelle drei Tabellen: (1) übereinstimmende Zahlungen, (2) Zahlungen ohne passende Rechnung, (3) Rechnungen ohne Zahlungseingang. Markiere unklare Übereinstimmungen.
+Ich habe meine Rechnungen bereits erstellt. Sie liegen als PDFs in demo_data. Lies diese PDFs und erstelle daraus eine CSV-Rechnungsliste mit Rechnungsnummer, Kunde, Datum, Betrag, Falligkeitsdatum und Zahlungsstatus.
+Gleiche danach die eingehenden Zahlungen aus dem Kontoauszug mit dieser CSV-Liste ab und markiere unklare Treffer.
 
 ## Backup-Demos
 

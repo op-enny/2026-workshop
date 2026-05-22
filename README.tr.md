@@ -13,11 +13,10 @@ Freelancer'lar, küçük işletmeler, ajanslar, ofis ekipleri, danışmanlık ve
 ## 3. Repo İçeriği
 
 - [artifacts/demo-kontoauszug.csv](artifacts/demo-kontoauszug.csv): Banka ekstresi
-- [artifacts/demo-rechnungsliste.xlsx](artifacts/demo-rechnungsliste.xlsx): Fatura listesi
+- [artifacts/demo_data](artifacts/demo_data): Fatura listesini oluşturmak için tekil PDF faturalar
 - [artifacts/demo-vertrag.pdf](artifacts/demo-vertrag.pdf): Sözleşme demosu
 - [artifacts/demo-posteingang.txt](artifacts/demo-posteingang.txt): E-posta önceliklendirme demosu
 - [artifacts/demo-offene-rechnungen.xlsx](artifacts/demo-offene-rechnungen.xlsx): Gecikmiş ödemeler demosu
-- [artifacts/demo_data](artifacts/demo_data): Tekil fatura PDF'leri
 - [artifacts/workshop-demo-guide.md](artifacts/workshop-demo-guide.md): Moderatör rehberi
 - [artifacts/demo-answer-key.md](artifacts/demo-answer-key.md): Beklenen sonuçlar
 - [artifacts/workshop-onepager.md](artifacts/workshop-onepager.md): Kısa özet
@@ -32,28 +31,37 @@ Freelancer'lar, küçük işletmeler, ajanslar, ofis ekipleri, danışmanlık ve
 
 ## 5. Workshop Akışı
 
-### Demo 1: Kontoauszug + Rechnungsliste
+### Demo 1: Kontoauszug + fatura listesi oluşturma
 
 Dosyalar:
 
 - [artifacts/demo-kontoauszug.csv](artifacts/demo-kontoauszug.csv)
-- [artifacts/demo-rechnungsliste.xlsx](artifacts/demo-rechnungsliste.xlsx)
+- [artifacts/demo_data](artifacts/demo_data)
 
 Amaç:
 
+- önce PDF faturalardan basit bir fatura listesi oluşturmak
 - Ödemeleri faturalarla eşleştirmek
 - açık faturaları bulmak
 - kısmi ödemeleri görmek
 - isim farklılıklarını ve açıklanamayan ödemeleri işaretlemek
 
+Claude ile adımlar:
+
+1. PDF örnek faturaların bulunduğu [artifacts/demo_data](artifacts/demo_data) klasörünü aç.
+2. Claude'a şu mantıkta söyle: Faturalarını zaten kestin. Bunlar bu klasörde PDF olarak duruyor. Bu klasördeki tüm PDF'leri okuyup fatura numarası, müşteri, tarih, tutar, vade tarihi ve ödeme durumu sütunlarını içeren bir CSV dosyası oluştur.
+3. Bu CSV dosyasını fatura listesi olarak kaydet.
+4. Sonra oluşturulan bu CSV'yi [artifacts/demo-kontoauszug.csv](artifacts/demo-kontoauszug.csv) ile birlikte ödeme eşleştirme adımında kullan.
+
 Örnek prompt:
 
 ```text
-Bu banka ekstresindeki gelen ödemeleri, ekteki fatura listesiyle eşleştir. Üç tablo döndür: (1) eşleşen ödemeler, (2) ekstrede var ama faturada yok, (3) faturada var ama ödeme gelmemiş. Belirsiz eşleşmeleri işaretle.
+Faturalarımı zaten kestim. Bunlar artifacts/demo_data klasöründe PDF olarak duruyor. Bu klasördeki tüm PDF'leri oku ve fatura numarası, müşteri, tarih, tutar, vade tarihi ve ödeme durumu sütunlarını içeren bir CSV fatura listesi oluştur. Sonra bu banka ekstresindeki gelen ödemeleri bu CSV ile eşleştir. Üç tablo döndür: (1) eşleşen ödemeler, (2) ekstrede var ama faturada yok, (3) faturada var ama ödeme gelmemiş. Belirsiz eşleşmeleri işaretle.
 ```
 
 Dikkat edilmesi gerekenler:
 
+- Fatura listesi hazır verilmez; kullanıcı bunu artifacts/demo_data altındaki PDF örneklerinden çıkarır.
 - Müller GmbH ve K. Müller bilerek birebir aynı yazılmadı.
 - Innovate GmbH sadece kısmen ödendi.
 - Fiverr ve Ref. 2024-123 doğrudan fatura listesiyle eşleşmiyor.

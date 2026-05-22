@@ -13,11 +13,10 @@ Freelancer, kleine Unternehmen, Agenturen, Office-Teams, Beratungs- und Backoffi
 ## 3. Repo-Inhalt
 
 - [artifacts/demo-kontoauszug.csv](artifacts/demo-kontoauszug.csv): Kontoauszug
-- [artifacts/demo-rechnungsliste.xlsx](artifacts/demo-rechnungsliste.xlsx): Rechnungsliste
+- [artifacts/demo_data](artifacts/demo_data): Einzelne Rechnungs-PDFs zur Erstellung der Rechnungsliste
 - [artifacts/demo-vertrag.pdf](artifacts/demo-vertrag.pdf): Vertragsdemo
 - [artifacts/demo-posteingang.txt](artifacts/demo-posteingang.txt): E-Mail-Triage-Demo
 - [artifacts/demo-offene-rechnungen.xlsx](artifacts/demo-offene-rechnungen.xlsx): Offene Rechnungen
-- [artifacts/demo_data](artifacts/demo_data): Einzelne Rechnungs-PDFs
 - [artifacts/workshop-demo-guide.md](artifacts/workshop-demo-guide.md): Moderator-Guide
 - [artifacts/demo-answer-key.md](artifacts/demo-answer-key.md): Erwartete Ergebnisse
 - [artifacts/workshop-onepager.md](artifacts/workshop-onepager.md): Kurzüberblick
@@ -32,28 +31,37 @@ Freelancer, kleine Unternehmen, Agenturen, Office-Teams, Beratungs- und Backoffi
 
 ## 5. Workshop-Ablauf
 
-### Demo 1: Kontoauszug + Rechnungsliste
+### Demo 1: Kontoauszug + Rechnungsliste aufbauen
 
 Dateien:
 
 - [artifacts/demo-kontoauszug.csv](artifacts/demo-kontoauszug.csv)
-- [artifacts/demo-rechnungsliste.xlsx](artifacts/demo-rechnungsliste.xlsx)
+- [artifacts/demo_data](artifacts/demo_data)
 
 Ziel:
 
+- aus den Rechnungs-PDFs zuerst eine einfache Rechnungsliste erstellen
 - Zahlungen mit Rechnungen abgleichen
 - offene Rechnungen finden
 - Teilzahlungen erkennen
 - Namensabweichungen und Fremdzahlungen markieren
 
+Schritte mit Claude:
+
+1. Öffne den Ordner [artifacts/demo_data](artifacts/demo_data) mit den Beispiel-Rechnungen als PDF.
+2. Sage Claude sinngemäß: Du hast deine Rechnungen bereits gestellt. Sie liegen als PDF-Dateien in einem Ordner. Lies alle PDFs in diesem Ordner und erstelle daraus eine CSV-Datei mit den Spalten Rechnungsnummer, Kunde, Datum, Betrag, Fälligkeitsdatum und Zahlungsstatus.
+3. Lass die CSV-Datei als Rechnungsliste speichern.
+4. Nutze diese erzeugte CSV danach zusammen mit [artifacts/demo-kontoauszug.csv](artifacts/demo-kontoauszug.csv) für den Zahlungsabgleich.
+
 Beispielprompt:
 
 ```text
-Gleiche die eingehenden Zahlungen aus diesem Kontoauszug mit der beigefügten Rechnungsliste ab. Erstelle drei Tabellen: (1) übereinstimmende Zahlungen, (2) Zahlungen ohne passende Rechnung, (3) Rechnungen ohne Zahlungseingang. Markiere unklare Übereinstimmungen.
+Ich habe meine Rechnungen bereits erstellt. Sie liegen als PDF-Dateien im Ordner artifacts/demo_data. Lies alle PDFs in diesem Ordner und erstelle daraus eine CSV-Datei mit den Spalten Rechnungsnummer, Kunde, Datum, Betrag, Fälligkeitsdatum und Zahlungsstatus. Nutze diese CSV anschließend zusammen mit dem Kontoauszug für den Abgleich. Erstelle drei Tabellen: (1) übereinstimmende Zahlungen, (2) Zahlungen ohne passende Rechnung, (3) Rechnungen ohne Zahlungseingang. Markiere unklare Übereinstimmungen.
 ```
 
 Worauf man achten sollte:
 
+- Die Rechnungsliste ist nicht vorgegeben, sondern wird aus den PDF-Belegen in artifacts/demo_data aufgebaut.
 - Müller GmbH und K. Müller sind absichtlich kein exakter Match.
 - Innovate GmbH ist nur teilweise bezahlt.
 - Fiverr und Ref. 2024-123 gehören nicht sauber zur Rechnungsliste.

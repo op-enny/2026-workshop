@@ -10,7 +10,7 @@ This repository contains realistic demo materials for a public workshop on docum
 Quick links:
 
 - [artifacts/demo-kontoauszug.csv](artifacts/demo-kontoauszug.csv)
-- [artifacts/demo-rechnungsliste.xlsx](artifacts/demo-rechnungsliste.xlsx)
+- [artifacts/demo_data](artifacts/demo_data)
 - [artifacts/demo-vertrag.pdf](artifacts/demo-vertrag.pdf)
 - [artifacts/demo-posteingang.txt](artifacts/demo-posteingang.txt)
 - [artifacts/demo-offene-rechnungen.xlsx](artifacts/demo-offene-rechnungen.xlsx)
