@@ -55,13 +55,8 @@ Her demo sayfasında ilgili dosya, örnek prompt ve bir sonraki adıma geçiş l
 4. Prompt'u daha iyi şekilde yeniden yaz.
 5. Yapı ile sonuç kalitesinin nasıl değiştiğini gözlemle.
 
-## 7. Eğitmen İçin
 
-- Akış için [artifacts/workshop-demo-guide.md](artifacts/workshop-demo-guide.md) dosyasını kullan.
-- Handout olarak [artifacts/workshop-onepager.pdf](artifacts/workshop-onepager.pdf) dosyasını kullan.
-- İç referans için [artifacts/demo-answer-key.md](artifacts/demo-answer-key.md) dosyasını kullan.
-
-## 8. Public Repo Notları
+## 7. Public Repo Notları
 
 Bu repo içindeki tüm veriler kurgusaldır. Gerçek hesap, gerçek fatura veya gerçek kişisel veri içermez.
 

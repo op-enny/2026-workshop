@@ -55,13 +55,7 @@ Jede Demo-Seite enthält die passende Datei, den Beispielprompt und eine Navigat
 4. Formuliere den Prompt noch einmal besser.
 5. Beobachte, wie sich Struktur und Ergebnisqualität verändern.
 
-## 7. Für Trainer
-
-- Nutze [artifacts/workshop-demo-guide.md](artifacts/workshop-demo-guide.md) als Ablaufhilfe.
-- Nutze [artifacts/workshop-onepager.pdf](artifacts/workshop-onepager.pdf) als Handout.
-- Nutze [artifacts/demo-answer-key.md](artifacts/demo-answer-key.md) als internen Referenzrahmen.
-
-## 8. Hinweise zur Veröffentlichung
+## 7. Hinweise zur Veröffentlichung
 
 Alle Daten in diesem Repository sind fiktiv. Es gibt keine echten Konten, keine echten Rechnungen und keine echten personenbezogenen Daten.
 
