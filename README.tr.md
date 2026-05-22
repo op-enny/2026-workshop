@@ -19,9 +19,7 @@ Freelancer'lar, küçük işletmeler, ajanslar, ofis ekipleri, danışmanlık ve
 - [artifacts/demo-offene-rechnungen.xlsx](artifacts/demo-offene-rechnungen.xlsx): Gecikmiş ödemeler demosu
 - [artifacts/workshop-demo-guide.md](artifacts/workshop-demo-guide.md): Moderatör rehberi
 - [artifacts/demo-answer-key.md](artifacts/demo-answer-key.md): Beklenen sonuçlar
-- [artifacts/workshop-onepager.md](artifacts/workshop-onepager.md): Kısa özet
-- [artifacts/workshop-onepager.pdf](artifacts/workshop-onepager.pdf): Yazdırılabilir one-pager
-- [artifacts/demo-files-spec.json](artifacts/demo-files-spec.json): Merkezi spesifikasyon
+
 
 ## 4. Hızlı Başlangıç
 

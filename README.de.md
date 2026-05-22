@@ -19,9 +19,7 @@ Freelancer, kleine Unternehmen, Agenturen, Office-Teams, Beratungs- und Backoffi
 - [artifacts/demo-offene-rechnungen.xlsx](artifacts/demo-offene-rechnungen.xlsx): Offene Rechnungen
 - [artifacts/workshop-demo-guide.md](artifacts/workshop-demo-guide.md): Moderator-Guide
 - [artifacts/demo-answer-key.md](artifacts/demo-answer-key.md): Erwartete Ergebnisse
-- [artifacts/workshop-onepager.md](artifacts/workshop-onepager.md): Kurzüberblick
-- [artifacts/workshop-onepager.pdf](artifacts/workshop-onepager.pdf): Printable one-pager
-- [artifacts/demo-files-spec.json](artifacts/demo-files-spec.json): Zentrale Spezifikation
+
 
 ## 4. Schnellstart
 
