@@ -16,7 +16,7 @@ Guided demo flow:
 
 Before the demo flow, participants can use https://tozilli.de for a short LLM warm-up on tokens and prompt techniques.
 
-- Access code: R9SHTUDK
+
 
 Quick links:
 
