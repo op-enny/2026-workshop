@@ -35,7 +35,7 @@ Freelancer, kleine Unternehmen, Agenturen, Office-Teams, Beratungs- und Backoffi
 Für die kurze Einführung zu LLM-Grundlagen, Tokens und Prompt-Techniken sollen Teilnehmende zuerst tozilli.de öffnen.
 
 - Website: https://tozilli.de
-- Access-Code: R9SHTUDK
+- Access-Code: <>
 - Ziel: erste kleine Experimente zu Tokens, Prompt-Struktur und LLM-Begriffen machen, bevor die eigentlichen Workshop-Demos starten
 
 ## 5. Demo-Ablauf

@@ -35,7 +35,7 @@ Freelancer'lar, küçük işletmeler, ajanslar, ofis ekipleri, danışmanlık ve
 LLM, token ve prompt teknikleriyle ilgili kısa giriş için katılımcılardan önce tozilli.de sayfasını açmalarını iste.
 
 - Website: https://tozilli.de
-- Erişim kodu: R9SHTUDK
+- Erişim kodu: <>
 - Amaç: asıl workshop demolarına geçmeden önce token mantığı, prompt yapısı ve temel LLM kavramları üzerinde kısa denemeler yapmak
 
 ## 5. Demo Akışı
