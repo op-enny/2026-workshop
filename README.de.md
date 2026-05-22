@@ -26,8 +26,17 @@ Freelancer, kleine Unternehmen, Agenturen, Office-Teams, Beratungs- und Backoffi
 ## 4. Schnellstart
 
 1. Repository öffnen.
-2. Mit Demo 1 starten.
-3. Danach die Backup-Szenarien einzeln ausprobieren.
+2. Vor Demo 1 kurz das LLM-Warm-up auf tozilli.de machen.
+3. Danach mit Demo 1 starten.
+4. Anschließend die weiteren Demos einzeln durchgehen.
+
+### LLM-Warm-up vor dem Workshop
+
+Für die kurze Einführung zu LLM-Grundlagen, Tokens und Prompt-Techniken sollen Teilnehmende zuerst tozilli.de öffnen.
+
+- Website: https://tozilli.de
+- Access-Code: R9SHTUDK
+- Ziel: erste kleine Experimente zu Tokens, Prompt-Struktur und LLM-Begriffen machen, bevor die eigentlichen Workshop-Demos starten
 
 ## 5. Demo-Ablauf
 

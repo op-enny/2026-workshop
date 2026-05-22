@@ -26,8 +26,17 @@ Freelancer'lar, küçük işletmeler, ajanslar, ofis ekipleri, danışmanlık ve
 ## 4. Hızlı Başlangıç
 
 1. Repo'yu aç.
-2. İlk olarak Demo 1 ile başla.
-3. Sonra yedek senaryoları tek tek dene.
+2. Demo 1'den önce kısa LLM ısınmasını tozilli.de üzerinde yap.
+3. Sonra Demo 1 ile başla.
+4. Ardından diğer demoları tek tek ilerlet.
+
+### Workshop öncesi LLM ısınması
+
+LLM, token ve prompt teknikleriyle ilgili kısa giriş için katılımcılardan önce tozilli.de sayfasını açmalarını iste.
+
+- Website: https://tozilli.de
+- Erişim kodu: R9SHTUDK
+- Amaç: asıl workshop demolarına geçmeden önce token mantığı, prompt yapısı ve temel LLM kavramları üzerinde kısa denemeler yapmak
 
 ## 5. Demo Akışı
 

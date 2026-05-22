@@ -14,6 +14,10 @@ Guided demo flow:
 - [Start with Demo 1 (DE)](demo-1.de.md)
 - [Demo 1 ile Başla (TR)](demo-1.tr.md)
 
+Before the demo flow, participants can use https://tozilli.de for a short LLM warm-up on tokens and prompt techniques.
+
+- Access code: R9SHTUDK
+
 Quick links:
 
 - [artifacts/demo-kontoauszug.csv](artifacts/demo-kontoauszug.csv)
