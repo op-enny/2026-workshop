@@ -61,7 +61,6 @@ Sana şimdi birden fazla faturayı PDF olarak yükleyeceğim. Alternatif olarak 
 
 Dikkat edilmesi gerekenler:
 
-- Fatura listesi hazır verilmez; kullanıcı bunu PDF örneklerinden çıkarır.
 - Claude Web tarafında klasör yolu vermek tek başına yeterli olmayabilir. En güvenilir yöntem PDF'leri yüklemek, ikinci seçenek ise her PDF için ayrı dosya linki vermektir.
 - Müller GmbH ve K. Müller bilerek birebir aynı yazılmadı.
 - Innovate GmbH sadece kısmen ödendi.
