@@ -16,13 +16,14 @@ Ziel:
 - unscharfe Treffer und Anomalien markieren
 
 Schritte mit Claude:
-1. Ordner demo_data mit den Rechnungs-PDFs oeffnen.
-2. Claude anweisen, alle PDFs im Ordner zu lesen und daraus eine CSV mit Rechnungsnummer, Kunde, Datum, Betrag, Falligkeitsdatum und Zahlungsstatus zu erstellen.
-3. Diese CSV danach fuer den Abgleich mit dem Kontoauszug verwenden.
+1. Rechnungs-PDFs aus demo_data bereitstellen.
+2. In Claude Web die PDFs einzeln hochladen oder direkte Dateilinks zu den PDFs senden.
+3. Claude anweisen, daraus eine CSV mit Rechnungsnummer, Kunde, Datum, Betrag, Falligkeitsdatum und Zahlungsstatus zu erstellen.
+4. Diese CSV danach fuer den Abgleich mit dem Kontoauszug verwenden.
 
 Prompt DE:
-Ich habe meine Rechnungen bereits erstellt. Sie liegen als PDF-Dateien im Ordner demo_data.
-Lies alle PDFs in diesem Ordner und erstelle daraus eine CSV-Datei mit Rechnungsnummer, Kunde, Datum, Betrag, Falligkeitsdatum und Zahlungsstatus.
+Ich lade dir jetzt mehrere Rechnungen als PDF hoch. Alternativ sende ich dir direkte Dateilinks zu diesen PDFs.
+Lies alle Rechnungen und erstelle daraus eine CSV-Datei mit Rechnungsnummer, Kunde, Datum, Betrag, Falligkeitsdatum und Zahlungsstatus.
 Gleiche danach die eingehenden Zahlungen aus diesem Kontoauszug mit dieser CSV ab. Erstelle drei Tabellen: (1) ubereinstimmende Zahlungen, (2) Zahlungen ohne passende Rechnung, (3) Rechnungen ohne Zahlungseingang. Markiere unklare Ubereinstimmungen.
 
 ## Block 4: Backup-Szenarien

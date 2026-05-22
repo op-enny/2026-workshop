@@ -48,20 +48,21 @@ Ziel:
 
 Schritte mit Claude:
 
-1. Öffne den Ordner [artifacts/demo_data](artifacts/demo_data) mit den Beispiel-Rechnungen als PDF.
-2. Sage Claude sinngemäß: Du hast deine Rechnungen bereits gestellt. Sie liegen als PDF-Dateien in einem Ordner. Lies alle PDFs in diesem Ordner und erstelle daraus eine CSV-Datei mit den Spalten Rechnungsnummer, Kunde, Datum, Betrag, Fälligkeitsdatum und Zahlungsstatus.
-3. Lass die CSV-Datei als Rechnungsliste speichern.
+1. Öffne die Beispiel-Rechnungen aus [artifacts/demo_data](artifacts/demo_data).
+2. Nutze in Claude Web entweder den Upload und lade die PDF-Dateien einzeln in den Chat hoch, oder sende einzelne direkte GitHub-Dateilinks zu den PDFs.
+3. Sage Claude, dass aus diesen PDF-Rechnungen eine CSV-Datei mit den Spalten Rechnungsnummer, Kunde, Datum, Betrag, Fälligkeitsdatum und Zahlungsstatus erstellt werden soll.
 4. Nutze diese erzeugte CSV danach zusammen mit [artifacts/demo-kontoauszug.csv](artifacts/demo-kontoauszug.csv) für den Zahlungsabgleich.
 
 Beispielprompt:
 
 ```text
-Ich habe meine Rechnungen bereits erstellt. Sie liegen als PDF-Dateien im Ordner artifacts/demo_data. Lies alle PDFs in diesem Ordner und erstelle daraus eine CSV-Datei mit den Spalten Rechnungsnummer, Kunde, Datum, Betrag, Fälligkeitsdatum und Zahlungsstatus. Nutze diese CSV anschließend zusammen mit dem Kontoauszug für den Abgleich. Erstelle drei Tabellen: (1) übereinstimmende Zahlungen, (2) Zahlungen ohne passende Rechnung, (3) Rechnungen ohne Zahlungseingang. Markiere unklare Übereinstimmungen.
+Ich lade dir jetzt mehrere Rechnungen als PDF hoch. Alternativ sende ich dir direkte GitHub-Dateilinks zu diesen PDFs. Lies alle Rechnungen und erstelle daraus eine CSV-Datei mit den Spalten Rechnungsnummer, Kunde, Datum, Betrag, Fälligkeitsdatum und Zahlungsstatus. Nutze diese CSV anschließend zusammen mit dem Kontoauszug für den Abgleich. Erstelle drei Tabellen: (1) übereinstimmende Zahlungen, (2) Zahlungen ohne passende Rechnung, (3) Rechnungen ohne Zahlungseingang. Markiere unklare Übereinstimmungen.
 ```
 
 Worauf man achten sollte:
 
-- Die Rechnungsliste ist nicht vorgegeben, sondern wird aus den PDF-Belegen in artifacts/demo_data aufgebaut.
+- Die Rechnungsliste ist nicht vorgegeben, sondern wird aus den PDF-Belegen aufgebaut.
+- In Claude Web ist Datei-Upload meist verlässlicher als nur ein Ordnerpfad. Wenn Links genutzt werden, dann einzelne PDF-Dateilinks statt nur ein Repo-Ordner.
 - Müller GmbH und K. Müller sind absichtlich kein exakter Match.
 - Innovate GmbH ist nur teilweise bezahlt.
 - Fiverr und Ref. 2024-123 gehören nicht sauber zur Rechnungsliste.

@@ -19,12 +19,12 @@ Aufgabe:
 - unklare Treffer und fremde Zahlungseingänge markieren
 
 Schritte mit Claude:
-- PDFs in demo_data von Claude auslesen lassen
+- PDFs in Claude Web hochladen oder direkte Dateilinks senden
 - daraus eine CSV-Rechnungsliste erzeugen lassen
 - die CSV dann mit dem Kontoauszug abgleichen
 
 Beispielprompt:
-Ich habe meine Rechnungen bereits erstellt. Sie liegen als PDFs in demo_data. Lies diese PDFs und erstelle daraus eine CSV-Rechnungsliste mit Rechnungsnummer, Kunde, Datum, Betrag, Falligkeitsdatum und Zahlungsstatus.
+Ich lade dir jetzt mehrere Rechnungen als PDF hoch. Alternativ sende ich dir direkte Dateilinks zu diesen PDFs. Lies alle Rechnungen und erstelle daraus eine CSV-Rechnungsliste mit Rechnungsnummer, Kunde, Datum, Betrag, Falligkeitsdatum und Zahlungsstatus.
 Gleiche danach die eingehenden Zahlungen aus dem Kontoauszug mit dieser CSV-Liste ab und markiere unklare Treffer.
 
 ## Backup-Demos

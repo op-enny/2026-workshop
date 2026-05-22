@@ -48,20 +48,21 @@ Amaç:
 
 Claude ile adımlar:
 
-1. PDF örnek faturaların bulunduğu [artifacts/demo_data](artifacts/demo_data) klasörünü aç.
-2. Claude'a şu mantıkta söyle: Faturalarını zaten kestin. Bunlar bu klasörde PDF olarak duruyor. Bu klasördeki tüm PDF'leri okuyup fatura numarası, müşteri, tarih, tutar, vade tarihi ve ödeme durumu sütunlarını içeren bir CSV dosyası oluştur.
-3. Bu CSV dosyasını fatura listesi olarak kaydet.
+1. [artifacts/demo_data](artifacts/demo_data) altındaki örnek PDF faturaları aç.
+2. Claude Web kullanırken PDF dosyalarını chat ekranına tek tek yükle ya da her PDF için ayrı doğrudan GitHub dosya linki ver.
+3. Claude'a, bu PDF'lerden fatura numarası, müşteri, tarih, tutar, vade tarihi ve ödeme durumu sütunlarını içeren bir CSV dosyası oluşturmasını söyle.
 4. Sonra oluşturulan bu CSV'yi [artifacts/demo-kontoauszug.csv](artifacts/demo-kontoauszug.csv) ile birlikte ödeme eşleştirme adımında kullan.
 
 Örnek prompt:
 
 ```text
-Faturalarımı zaten kestim. Bunlar artifacts/demo_data klasöründe PDF olarak duruyor. Bu klasördeki tüm PDF'leri oku ve fatura numarası, müşteri, tarih, tutar, vade tarihi ve ödeme durumu sütunlarını içeren bir CSV fatura listesi oluştur. Sonra bu banka ekstresindeki gelen ödemeleri bu CSV ile eşleştir. Üç tablo döndür: (1) eşleşen ödemeler, (2) ekstrede var ama faturada yok, (3) faturada var ama ödeme gelmemiş. Belirsiz eşleşmeleri işaretle.
+Sana şimdi birden fazla faturayı PDF olarak yükleyeceğim. Alternatif olarak her PDF için doğrudan GitHub dosya linki de paylaşabilirim. Bu faturaların hepsini okuyup fatura numarası, müşteri, tarih, tutar, vade tarihi ve ödeme durumu sütunlarını içeren bir CSV fatura listesi oluştur. Sonra bu banka ekstresindeki gelen ödemeleri bu CSV ile eşleştir. Üç tablo döndür: (1) eşleşen ödemeler, (2) ekstrede var ama faturada yok, (3) faturada var ama ödeme gelmemiş. Belirsiz eşleşmeleri işaretle.
 ```
 
 Dikkat edilmesi gerekenler:
 
-- Fatura listesi hazır verilmez; kullanıcı bunu artifacts/demo_data altındaki PDF örneklerinden çıkarır.
+- Fatura listesi hazır verilmez; kullanıcı bunu PDF örneklerinden çıkarır.
+- Claude Web tarafında klasör yolu vermek tek başına yeterli olmayabilir. En güvenilir yöntem PDF'leri yüklemek, ikinci seçenek ise her PDF için ayrı dosya linki vermektir.
 - Müller GmbH ve K. Müller bilerek birebir aynı yazılmadı.
 - Innovate GmbH sadece kısmen ödendi.
 - Fiverr ve Ref. 2024-123 doğrudan fatura listesiyle eşleşmiyor.
